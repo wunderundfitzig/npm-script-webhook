@@ -1,5 +1,8 @@
 const { send } = require('micro');
 const { promisify } = require('util');
+const env = require('node-env-file');
+
+env(`${__dirname}/../.env`);
 
 const validateReq = require('./lib/validateReq');
 const exec = promisify(require('child_process').exec);
