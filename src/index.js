@@ -5,8 +5,8 @@ const validateReq = require('./lib/validateReq');
 const exec = promisify(require('child_process').exec);
 
 // Critical: exit early if the token is not defined.
-if (!process.env.NSW_TOKEN) {
-  console.error('NO TOKEN DEFINED, EXITING.');
+if (!process.env.NSW_TOKEN || !process.env.NSW_USER) {
+  console.error('NO TOKEN OR USER DEFINED, EXITING.');
   process.exit(1);
 }
 

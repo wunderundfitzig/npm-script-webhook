@@ -12,6 +12,7 @@
   "author": "Felipe Lube de Bragança <felipe.lubra@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "basic-auth": "^2.0.1",
     "config": "^1.30.0",
     "micro": "^9.1.4"
   },
