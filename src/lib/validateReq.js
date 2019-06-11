@@ -5,7 +5,7 @@ const username = process.env.NSW_USER;
 const token = process.env.NSW_TOKEN;
 
 module.exports = async (req) => {
-  if (req.method !== 'GET') {
+  if (req.method !== 'POST') {
     throw createError(405, 'Method not allowed');
   } else {
     const user = auth(req);
